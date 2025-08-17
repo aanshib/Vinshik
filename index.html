@@ -1,0 +1,161 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VinShik Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-container">
+                    <h1><span class="vin">Vin</span><span class="shik">Shik</span></h1>
+                    <button class="sidebar-toggle">
+                        <svg width="16" height="16" viewBox="0 0 16 16" class="toggle-arrow">
+                            <path d="M6 4 L10 8 L6 12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+    <a href="#" class="nav-item active" data-page="home">
+        <img src="images/house.png" alt="Home" class="nav-icon" />
+        <span class="nav-text">Home</span>
+    </a>
+    <a href="#" class="nav-item" data-page="calendar">
+        <img src="images/calendar.png" alt="Calendar" class="nav-icon" />
+        <span class="nav-text">Calendar</span>
+    </a>
+    <a href="#" class="nav-item" data-page="map">
+        <img src="images/map.png" alt="Map" class="nav-icon" />
+        <span class="nav-text">Map</span>
+    </a>
+    <a href="#" class="nav-item" data-page="clients">
+        <img src="images/cleints.png" alt="Clients" class="nav-icon" />
+        <span class="nav-text">Clients</span>
+    </a>
+    <a href="#" class="nav-item" data-page="jobs">
+        <img src="images/jobs.png" alt="Jobs" class="nav-icon" />
+        <span class="nav-text">Jobs</span>
+    </a>
+    <a href="#" class="nav-item" data-page="quotes">
+        <img src="images/quotes.png" alt="Quotes" class="nav-icon" />
+        <span class="nav-text">Quotes</span>
+    </a>
+    <a href="#" class="nav-item" data-page="services">
+        <img src="images/services.png" alt="Services" class="nav-icon" />
+        <span class="nav-text">My Services</span>
+    </a>
+</nav>
+
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <div class="header-actions">
+                    <button class="header-btn">
+                        <span class="notification-dot"></span>
+                        ✉
+                    </button>
+                    <button class="header-btn">⚙</button>
+                    <div class="user-avatar">
+                        <img src="images/woman.png" alt="User Avatar">
+                    </div>
+                </div>
+            </header>
+
+            <section class="welcome-section">
+                <h2 class="welcome-title">Welcome back, Julie 👋</h2>
+                <p class="welcome-subtitle">Here's what you need to focus on today</p>
+            </section>
+
+            <!-- Metrics -->
+            <section class="metrics-grid">
+                <div class="metric-card">
+                    <h3 class="metric-title">Active Jobs</h3>
+                    <div class="metric-trend">
+                        <div class="trend-circle positive">
+                            <svg width="16" height="16" viewBox="0 0 16 16">
+                                <path d="M2 12 L6 8 L10 10 L14 4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                                <path d="M11 4 L14 4 L14 7" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <span class="trend-percentage">+12.2%</span>
+                    </div>
+                    <div class="metric-content">
+                        <div class="metric-value">43.7k</div>
+                        <div class="metric-chart">
+                            <canvas id="chart1" width="80" height="40"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <h3 class="metric-title">Jobs In Progress</h3>
+                    <div class="metric-trend">
+                        <div class="trend-circle negative">
+                            <svg width="16" height="16" viewBox="0 0 16 16">
+                                <path d="M2 4 L6 8 L10 6 L14 12" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                                <path d="M11 12 L14 12 L14 9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <span class="trend-percentage">-31%</span>
+                    </div>
+                    <div class="metric-content">
+                        <div class="metric-value">92.3k</div>
+                        <div class="metric-chart">
+                            <canvas id="chart2" width="80" height="40"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <h3 class="metric-title">Finished Jobs</h3>
+                    <div class="metric-trend">
+                        <div class="trend-circle positive">
+                            <svg width="16" height="16" viewBox="0 0 16 16">
+                                <path d="M2 12 L6 8 L10 10 L14 4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                                <path d="M11 4 L14 4 L14 7" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <span class="trend-percentage">+3.3%</span>
+                    </div>
+                    <div class="metric-content">
+                        <div class="metric-value">66.3k</div>
+                        <div class="metric-chart">
+                            <canvas id="chart3" width="80" height="40"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="metric-card">
+                    <h3 class="metric-title">New Leads</h3>
+                    <div class="metric-trend">
+                        <div class="trend-circle positive">
+                            <svg width="16" height="16" viewBox="0 0 16 16">
+                                <path d="M2 12 L6 8 L10 10 L14 4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                                <path d="M11 4 L14 4 L14 7" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <span class="trend-percentage">+31%</span>
+                    </div>
+                    <div class="metric-content">
+                        <div class="metric-value">92.3k</div>
+                        <div class="metric-chart">
+                            <canvas id="chart4" width="80" height="40"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+\
